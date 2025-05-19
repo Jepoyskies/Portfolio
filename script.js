@@ -26,13 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power4.out'
     });
 
-    gsap.from('.btn-primary', {
-        duration: 1,
-        opacity: 0,
-        y: 30,
-        delay: 0.9,
-        ease: 'power4.out'
-    });
+    const viewMyWorkBtn = document.querySelector('.btn-primary');
+    if (viewMyWorkBtn) {
+        console.log('View My Work button found:', viewMyWorkBtn); // Debug log
+        gsap.from(viewMyWorkBtn, {
+            duration: 1,
+            opacity: 0,
+            y: 30,
+            delay: 0.9,
+            ease: 'power4.out',
+            onComplete: () => {
+                viewMyWorkBtn.style.opacity = 1; // Ensure visibility after animation
+            }
+        });
+    } else {
+        console.error('View My Work button not found in the DOM.');
+    }
 
     // Section animations
     gsap.utils.toArray('.section').forEach(section => {
@@ -81,15 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Back to top button
     const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTop.style.display = 'block';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
+    if (backToTop) {
+        console.log('Back to Top button found:', backToTop); // Debug log
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
 
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.error('Back to Top button not found in the DOM.');
+    }
 });
