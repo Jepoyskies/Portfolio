@@ -266,6 +266,37 @@ main {
     transform: translateY(-2px);
 }
 
+.email-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.email-btn .initial-text,
+.email-btn .email-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.email-btn .initial-text {
+    opacity: 1;
+}
+
+.email-btn .email-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.email-btn.show-email .initial-text {
+    opacity: 0;
+}
+
+.email-btn.show-email .email-text {
+    opacity: 1;
+}
+
 /* Footer */
 footer {
     text-align: center;

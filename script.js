@@ -106,4 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Back to Top button not found in the DOM.');
     }
+
+    // Email button functionality
+    const emailBtn = document.querySelector('.email-btn');
+    if (emailBtn) {
+        emailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            emailBtn.classList.toggle('show-email');
+            if (emailBtn.classList.contains('show-email')) {
+                const email = emailBtn.getAttribute('data-email');
+                emailBtn.querySelector('.email-text').textContent = email;
+            }
+        });
+    }
 });
