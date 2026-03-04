@@ -1,122 +1,113 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // GSAP Animations
+    // Register GSAP Plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero animations
-    gsap.from('.profile-img', {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        ease: 'power4.out'
-    });
+    // --- 1. HERO REVEAL ---
+    const tl = gsap.timeline();
+    
+    // Animate Nav
+    tl.from('.navbar', { y: -20, opacity: 0, duration: 0.8, ease: 'power3.out' })
+    // Animate Badge
+      .from('.status-badge', { y: 20, opacity: 0, duration: 0.6 }, '-=0.6')
+    // Animate Text
+      .from('.reveal-text', { y: 20, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }, '-=0.4')
+    // Animate Profile Image (Simply Fade opacity to 1)
+      .to('.profile-img', { opacity: 1, duration: 1.2, ease: 'power3.out' }, '-=0.8')
+    // Animate Tech Card
+      .to('.tech-card', { y: 0, opacity: 1, duration: 0.6, ease: 'back.out(1.5)' }, '-=0.6');
 
-    gsap.from('.hero-content h1', {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 0.3,
-        ease: 'power4.out'
-    });
+    // --- 2. BULLETPROOF SCROLL ANIMATIONS ---
+    // 'toggleActions: play none none none' ensures it plays once and stays visible forever.
 
-    gsap.from('.hero-content p', {
-        duration: 1,
-        opacity: 0,
-        y: 40,
-        delay: 0.6,
-        ease: 'power4.out'
-    });
-
-    const viewMyWorkBtn = document.querySelector('.btn-primary');
-    if (viewMyWorkBtn) {
-        console.log('View My Work button found:', viewMyWorkBtn); // Debug log
-        gsap.from(viewMyWorkBtn, {
-            duration: 1,
-            opacity: 0,
-            y: 30,
-            delay: 0.9,
-            ease: 'power4.out',
-            onComplete: () => {
-                viewMyWorkBtn.style.opacity = 1; // Ensure visibility after animation
-            }
-        });
-    } else {
-        console.error('View My Work button not found in the DOM.');
-    }
-
-    // Section animations
-    gsap.utils.toArray('.section').forEach(section => {
-        gsap.from(section, {
+    // General Section Headers
+    const elementsToReveal = document.querySelectorAll('.reveal-element');
+    elementsToReveal.forEach(el => {
+        gsap.from(el, {
             scrollTrigger: {
-                trigger: section,
-                start: 'top 80%',
+                trigger: el,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
             },
+            y: 40,
             opacity: 0,
-            y: 50,
-            duration: 1,
+            duration: 0.8,
             ease: 'power3.out'
         });
     });
 
-    // Project card animations
-    gsap.utils.toArray('.project-card').forEach((card, i) => {
+    // Systems Grid Cards
+    const systemCards = document.querySelectorAll('.system-card');
+    systemCards.forEach((card, index) => {
         gsap.from(card, {
             scrollTrigger: {
                 trigger: card,
                 start: 'top 90%',
+                toggleActions: 'play none none none'
             },
-            opacity: 0,
             y: 40,
-            duration: 0.8,
-            delay: i * 0.1,
+            opacity: 0,
+            duration: 0.6,
+            delay: (index % 2) * 0.1, 
             ease: 'power3.out'
         });
     });
 
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+    // Lab Grid Cards
+    const labCards = document.querySelectorAll('.lab-card');
+    labCards.forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 95%', 
+                toggleActions: 'play none none none'
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.5,
+            delay: (index % 3) * 0.05, 
+            ease: 'power2.out'
+        });
+    });
+
+    // --- 3. SMART EMAIL BUTTON ---
+    const emailBtn = document.getElementById('email-btn');
+    const emailText = document.getElementById('email-text');
+    const emailAddress = "albertojosephernestp.2003@gmail.com";
+
+    if (emailBtn && emailText) {
+        emailBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            
+            navigator.clipboard.writeText(emailAddress).then(() => {
+                const originalText = emailText.textContent;
+                emailText.textContent = "Email Copied! ✅";
+                
+                // Visual feedback
+                emailBtn.style.background = "#fafafa"; 
+                emailBtn.style.color = "#09090b"; 
+                
+                setTimeout(() => {
+                    emailText.textContent = originalText;
+                    emailBtn.style.background = ""; 
+                    emailBtn.style.color = "";
+                }, 1500);
+            });
+        });
+    }
+
+    // --- 4. SMOOTH SCROLLING ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
                 window.scrollTo({
-                    top: targetSection.offsetTop - 60,
+                    top: target.offsetTop - navHeight - 20,
                     behavior: 'smooth'
                 });
             }
         });
     });
-
-    // Back to top button
-    const backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-        console.log('Back to Top button found:', backToTop); // Debug log
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    } else {
-        console.error('Back to Top button not found in the DOM.');
-    }
-
-    // Email button functionality
-    const emailBtn = document.querySelector('.email-btn');
-    if (emailBtn) {
-        emailBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            emailBtn.classList.toggle('show-email');
-            if (emailBtn.classList.contains('show-email')) {
-                const email = emailBtn.getAttribute('data-email');
-                emailBtn.querySelector('.email-text').textContent = email;
-            }
-        });
-    }
 });
