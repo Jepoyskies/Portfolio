@@ -8,6 +8,12 @@
     <!-- Premium Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- VALIDATOR FIX: Small override to ensure H3s in the grid look correct -->
+    <style>
+        .lab-content h3 { font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-head); }
+    </style>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
@@ -24,7 +30,7 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- New GitHub Icon Link in Nav -->
+                <!-- GitHub Icon -->
                 <li>
                     <a href="https://github.com/Jepoyskies" target="_blank" class="nav-github" aria-label="GitHub Profile">
                         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -162,53 +168,54 @@
                 <h2>UI Experiments & Archives</h2>
             </div>
 
+            <!-- FIXED: Changed h4 to h3 to satisfy Validator hierarchy -->
             <div class="lab-grid">
                 <div class="lab-card">
                     <img src="space.jpg" alt="Space Site" class="project-image">
                     <div class="lab-content">
-                        <h4>Interactive Space UI</h4>
+                        <h3>Interactive Space UI</h3>
                         <a href="https://alberto-space.netlify.app" target="_blank">Explore ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="googleclone.jpg" alt="Google Clone" class="project-image">
                     <div class="lab-content">
-                        <h4>Search Replica</h4>
+                        <h3>Search Replica</h3>
                         <a href="https://googleclonealberto.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="business.jpg" alt="Business Card" class="project-image">
                     <div class="lab-content">
-                        <h4>Digital ID Card</h4>
+                        <h3>Digital ID Card</h3>
                         <a href="https://businesscardalberto.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="bday.jpg" alt="Birthday Site" class="project-image">
                     <div class="lab-content">
-                        <h4>Animation Sandbox</h4>
+                        <h3>Animation Sandbox</h3>
                         <a href="https://alberto-gift.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="screen.jpg" alt="Responsive Test" class="project-image">
                     <div class="lab-content">
-                        <h4>Responsive Test</h4>
+                        <h3>Responsive Test</h3>
                         <a href="https://alberto-project-1.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="port.jpg" alt="Grid Test" class="project-image">
                     <div class="lab-content">
-                        <h4>Grid Layout System</h4>
+                        <h3>Grid Layout System</h3>
                         <a href="https://alberto-project-2.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="Personal.jpg" alt="Legacy Site" class="project-image">
                     <div class="lab-content">
-                        <h4>Legacy V1</h4>
+                        <h3>Legacy V1</h3>
                         <a href="https://jepalberto.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
@@ -256,11 +263,12 @@
                     </div>
                 </div>
 
-                <!-- COL 2: Commercial Experience (New) -->
+                <!-- COL 2: Commercial Experience -->
                 <div class="resume-col">
                     <div class="resume-card highlight-card">
                         <h3><span class="icon">💼</span> Commercial Experience</h3>
                         
+                        <!-- Hierarchy: H3 -> H4 (Valid) -->
                         <div class="timeline-item">
                             <span class="timeline-date">Freelance</span>
                             <h4>POS & Inventory Systems</h4>
