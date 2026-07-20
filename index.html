@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joseph Ernest P. Alberto - IT Student & Full Stack Developer">
-    <title>Joseph Alberto | Frontend Engineer</title>
+    <meta name="description" content="Joseph Ernest P. Alberto - Full Stack Developer & Operations Specialist">
+    <title>Joseph Alberto | Full-Stack Engineer</title>
     <!-- Premium Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- VALIDATOR FIX: Small override to ensure H3s in the grid look correct -->
+
     <style>
-        .lab-content h3 { font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-head); }
+        .lab-content h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: var(--text-head);
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+
     <!-- Background Grid -->
     <div class="bg-grid"></div>
 
@@ -27,13 +34,19 @@
         <div class="nav-content">
             <span class="logo">JA<span class="dot">.</span></span>
             <ul class="nav-links">
-                <li><a href="#work">Work</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#flagship">Projects</a></li>
+                <li><a href="#resume">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- GitHub Icon -->
                 <li>
-                    <a href="https://github.com/Jepoyskies" target="_blank" class="nav-github" aria-label="GitHub Profile">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <a href="https://github.com/Jepoyskies" target="_blank" class="nav-github"
+                        aria-label="GitHub Profile">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
                     </a>
                 </li>
             </ul>
@@ -44,27 +57,29 @@
         <!-- Hero Section -->
         <section class="hero-bento">
             <div class="bento-text">
-                <span class="status-badge"><span class="pulse"></span>Available for opportunities</span>
-                <h1 class="reveal-text gradient-text">Engineering <br>Digital Reality.</h1>
-                <p class="reveal-text">Hi, I'm Jep! A passionate IT student and Developer based in Cagayan de Oro. I build real-world solutions like POS systems and business apps, turning complex logic into accessible interfaces.</p>
+                <span class="status-badge"><span class="pulse"></span>Seeking 486-Hour OJT / Internship</span>
+                <h1 class="reveal-text gradient-text">Engineering <br>Business Reality.</h1>
+                <p class="reveal-text">Hi, I'm Jep! A Full-Stack Developer and IT student based in Cagayan de Oro. I
+                    combine deep Python/JS coding skills with gritty, real-world business management experience to build
+                    enterprise systems that actually solve operational bottlenecks.</p>
                 <div class="hero-btns reveal-text">
-                    <a href="#flagship" class="btn btn-primary">See Latest Work</a>
+                    <a href="#flagship" class="btn btn-primary">See Enterprise Work</a>
                     <a href="https://github.com/Jepoyskies" target="_blank" class="btn btn-outline">
                         <span>GitHub Profile</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="bento-visual">
                 <div class="hero-glow"></div>
                 <img src="Jeps.jpg" alt="Joseph Alberto" class="profile-img">
                 <div class="tech-card">
                     <span class="mono-label">Current Stack</span>
                     <div class="stack-list">
-                        <span>React</span>
-                        <span>Django</span>
-                        <span>Express.js</span>
-                        <span>MongoDB</span>
+                        <span>Python/Django</span>
+                        <span>JavaScript</span>
+                        <span>MySQL/PostgreSQL</span>
+                        <span>Bootstrap/Tailwind</span>
                     </div>
                 </div>
             </div>
@@ -73,31 +88,37 @@
         <!-- TIER 1: The Masterpiece -->
         <section id="flagship" class="section-flagship">
             <div class="section-header reveal-element">
-                <span class="mono-label">01. Culminating Project</span>
+                <span class="mono-label">01. Capstone System</span>
                 <h2>The Flagship</h2>
             </div>
-            
+
             <div class="flagship-card reveal-element">
                 <div class="flagship-content">
-                    <span class="category-tag">Game Engine Architecture</span>
-                    <h3>We Are Warriors</h3>
-                    <p>A turn-based combat system engineered with Vanilla JavaScript. This project represents the peak of my current capabilities, featuring a custom state machine for enemy AI logic, dynamic DOM manipulation for real-time health updates, and complex event handling.</p>
-                    
+                    <span class="category-tag">Enterprise Web Architecture</span>
+                    <h3>Xavier Junior High School - PIS</h3>
+                    <p>A monolithic, server-side rendered (SSR) web application digitizing the disciplinary and
+                        attendance tracking systems for XU-JHS. Features include a rapid attendance encoding grid,
+                        strict Role-Based Access Control (RBAC), and an intelligent backend engine that automatically
+                        calculates disciplinary demerits, deducts deportment grades, and triggers Google SMTP email
+                        notifications.</p>
+
                     <div class="stat-row">
                         <div class="stat">
-                            <span class="stat-val">Custom</span>
-                            <span class="stat-label">State Machine</span>
+                            <span class="stat-val">Django</span>
+                            <span class="stat-label">Python Backend</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-val">100%</span>
-                            <span class="stat-label">Vanilla JS</span>
+                            <span class="stat-val">MySQL</span>
+                            <span class="stat-label">Relational Database</span>
                         </div>
                     </div>
 
-                    <a href="https://wearewarriorsjepjorz.netlify.app" target="_blank" class="btn btn-primary">Play Game Prototype</a>
+                    <a href="https://github.com/Jepoyskies/PIS.git" target="_blank" class="btn btn-primary">View
+                        Repository</a>
                 </div>
                 <div class="flagship-image-wrapper">
-                    <img src="wearewarriors.jpg" alt="We Are Warriors Game" class="project-image">
+                    <!-- Note: Update this image to a screenshot of your PIS Dashboard -->
+                    <img src="pis-preview.jpg" alt="XJHS PIS Dashboard" class="project-image">
                 </div>
             </div>
         </section>
@@ -107,116 +128,111 @@
             <div class="section-header reveal-element">
                 <span class="mono-label">02. Selected Works</span>
                 <h2>Engineered Systems</h2>
-                <p>Logic-driven applications focusing on state, security, and data.</p>
+                <p>Logic-driven applications focusing on business operations, data, and interactive state.</p>
             </div>
 
             <div class="systems-grid">
                 <div class="system-card">
                     <div class="card-image">
+                        <!-- Note: Update to Inventory screenshot -->
+                        <img src="inventory.jpg" alt="Rich-Land POS" class="project-image">
+                    </div>
+                    <div class="card-info">
+                        <h3>Rich-Land POS & Inventory</h3>
+                        <p>A dynamic point-of-sale and stock management system designed to optimize operations and
+                            handle financial tracking for a high-traffic local grocery store.</p>
+                        <div class="tags"><span>Python/Flask</span><span>JavaScript</span></div>
+                        <a href="https://github.com/JhoramNarsico/Rich-Land-IOS.git" target="_blank"
+                            class="link-arrow">View Code
+                            ↗</a>
+                    </div>
+                </div>
+
+                <div class="system-card">
+                    <div class="card-image">
+                        <!-- Note: Update to Networking Reviewer screenshot -->
+                        <img src="networking.jpg" alt="Networking Engine" class="project-image">
+                    </div>
+                    <div class="card-info">
+                        <h3>Networking Assessment Engine</h3>
+                        <p>An interactive CCNA exam platform featuring automatic DOM-text parsing for an interactive
+                            dictionary, state-based grading, and custom anti-cheat event listeners.</p>
+                        <div class="tags"><span>Vanilla JS</span><span>DOM Logic</span></div>
+                        <a href="https://networking2albertoboc.netlify.app" target="_blank" class="link-arrow">View
+                            Project ↗</a>
+                    </div>
+                </div>
+
+                <div class="system-card">
+                    <div class="card-image">
+                        <img src="water.jpg" alt="Water Calculator" class="project-image">
+                    </div>
+                    <div class="card-info">
+                        <h3>Water Business Calculator</h3>
+                        <p>Custom operational software built to digitize, calculate, and optimize daily business
+                            computations and logistics tracking for a water distribution enterprise.</p>
+                        <div class="tags"><span>Business Logic</span><span>Algorithms</span></div>
+                        <a href="https://zendropscalculator.netlify.app" target="_blank" class="link-arrow">View App
+                            ↗</a>
+                    </div>
+                </div>
+
+                <div class="system-card">
+                    <div class="card-image">
                         <img src="login.jpg" alt="Auth System" class="project-image">
                     </div>
                     <div class="card-info">
-                        <h3>Secure Auth System</h3>
-                        <p>Full-stack authentication flow demonstrating client-side validation, secure routing, and database integration fundamentals.</p>
+                        <h3>Secure Auth Flow</h3>
+                        <p>Full-stack authentication system demonstrating client-side validation, secure routing, and
+                            database integration fundamentals.</p>
                         <div class="tags"><span>Security</span><span>Database</span></div>
                         <a href="https://youtu.be/K_YaRxKSIFM" target="_blank" class="link-arrow">View Demo ↗</a>
-                    </div>
-                </div>
-
-                <div class="system-card">
-                    <div class="card-image">
-                        <img src="people.jpg" alt="People Counter" class="project-image">
-                    </div>
-                    <div class="card-info">
-                        <h3>Real-Time Capacity Tracker</h3>
-                        <p>A logic-driven app managing venue capacity state, featuring local storage persistence and dynamic UI updates.</p>
-                        <div class="tags"><span>State</span><span>Local Storage</span></div>
-                        <a href="https://albertopeoplecounterapp.netlify.app" target="_blank" class="link-arrow">View App ↗</a>
-                    </div>
-                </div>
-
-                <div class="system-card">
-                    <div class="card-image">
-                        <img src="black.jpg" alt="Blackjack" class="project-image">
-                    </div>
-                    <div class="card-info">
-                        <h3>Blackjack Logic Engine</h3>
-                        <p>Simulation of casino logic including card randomization algorithms, score calculation, and win/loss state evaluation.</p>
-                        <div class="tags"><span>Algorithms</span><span>Math</span></div>
-                        <a href="https://albertoblackjack.netlify.app" target="_blank" class="link-arrow">Play Game ↗</a>
-                    </div>
-                </div>
-
-                <div class="system-card">
-                    <div class="card-image">
-                        <img src="bookmark.jpg" alt="Chrome Extension" class="project-image">
-                    </div>
-                    <div class="card-info">
-                        <h3>Productivity Extension</h3>
-                        <p>A custom Chrome extension designed to optimize workflow, utilizing browser local storage APIs.</p>
-                        <div class="tags"><span>Browser API</span><span>Workflow</span></div>
-                        <a href="https://youtu.be/DxWkRwxS0Mw" target="_blank" class="link-arrow">View Demo ↗</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TIER 3: The Lab -->
+        <!-- TIER 3: The Lab (Moved Games Here) -->
         <section class="section-lab">
             <div class="section-header reveal-element">
                 <span class="mono-label">03. The Lab</span>
-                <h2>UI Experiments & Archives</h2>
+                <h2>Algorithmic Experiments & UI Clones</h2>
             </div>
 
-            <!-- FIXED: Changed h4 to h3 to satisfy Validator hierarchy -->
             <div class="lab-grid">
                 <div class="lab-card">
-                    <img src="space.jpg" alt="Space Site" class="project-image">
+                    <img src="wearewarriors.jpg" alt="We Are Warriors Game" class="project-image">
                     <div class="lab-content">
-                        <h3>Interactive Space UI</h3>
-                        <a href="https://alberto-space.netlify.app" target="_blank">Explore ↗</a>
+                        <h3>Custom State Machine Game</h3>
+                        <a href="https://wearewarriorsjepjorz.netlify.app" target="_blank">Play ↗</a>
+                    </div>
+                </div>
+                <div class="lab-card">
+                    <img src="black.jpg" alt="Blackjack" class="project-image">
+                    <div class="lab-content">
+                        <h3>Blackjack Probability Engine</h3>
+                        <a href="https://albertoblackjack.netlify.app" target="_blank">Play ↗</a>
+                    </div>
+                </div>
+                <div class="lab-card">
+                    <img src="people.jpg" alt="People Counter" class="project-image">
+                    <div class="lab-content">
+                        <h3>Real-Time Capacity Tracker</h3>
+                        <a href="https://albertopeoplecounterapp.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
                     <img src="googleclone.jpg" alt="Google Clone" class="project-image">
                     <div class="lab-content">
-                        <h3>Search Replica</h3>
+                        <h3>Search UI Replica</h3>
                         <a href="https://googleclonealberto.netlify.app" target="_blank">View ↗</a>
                     </div>
                 </div>
                 <div class="lab-card">
-                    <img src="business.jpg" alt="Business Card" class="project-image">
+                    <img src="bookmark.jpg" alt="Chrome Extension" class="project-image">
                     <div class="lab-content">
-                        <h3>Digital ID Card</h3>
-                        <a href="https://businesscardalberto.netlify.app" target="_blank">View ↗</a>
-                    </div>
-                </div>
-                <div class="lab-card">
-                    <img src="bday.jpg" alt="Birthday Site" class="project-image">
-                    <div class="lab-content">
-                        <h3>Animation Sandbox</h3>
-                        <a href="https://alberto-gift.netlify.app" target="_blank">View ↗</a>
-                    </div>
-                </div>
-                <div class="lab-card">
-                    <img src="screen.jpg" alt="Responsive Test" class="project-image">
-                    <div class="lab-content">
-                        <h3>Responsive Test</h3>
-                        <a href="https://alberto-project-1.netlify.app" target="_blank">View ↗</a>
-                    </div>
-                </div>
-                <div class="lab-card">
-                    <img src="port.jpg" alt="Grid Test" class="project-image">
-                    <div class="lab-content">
-                        <h3>Grid Layout System</h3>
-                        <a href="https://alberto-project-2.netlify.app" target="_blank">View ↗</a>
-                    </div>
-                </div>
-                <div class="lab-card">
-                    <img src="Personal.jpg" alt="Legacy Site" class="project-image">
-                    <div class="lab-content">
-                        <h3>Legacy V1</h3>
-                        <a href="https://jepalberto.netlify.app" target="_blank">View ↗</a>
+                        <h3>Productivity Extension</h3>
+                        <a href="https://youtu.be/DxWkRwxS0Mw" target="_blank">Watch ↗</a>
                     </div>
                 </div>
             </div>
@@ -226,38 +242,40 @@
         <section id="resume" class="section-resume reveal-element">
             <div class="section-header">
                 <span class="mono-label">04. Resume & Background</span>
-                <h2>Professional Summary</h2>
+                <h2>More Than Just Code</h2>
             </div>
 
             <div class="resume-grid">
-                
+
                 <!-- COL 1: Personal Background -->
                 <div class="resume-col">
                     <div class="resume-card">
-                        <h3><span class="icon">👤</span> Personal Background</h3>
+                        <h3><span class="icon">👤</span> The Developer</h3>
                         <p class="bio-text">
-                            I am <strong>Joseph Ernest P. Alberto</strong>, an IT Student at Xavier University. I have experience developing <strong>inventory systems, POS solutions, and business calculation apps</strong> for local businesses.
+                            I am <strong>Joseph Ernest P. Alberto</strong>, a 4th-year BSIT Student at Xavier
+                            University. What sets me apart is my extensive domain knowledge in business operations.
                         </p>
                         <p class="bio-text">
-                            I love building real-world solutions and sharing what I learn. Currently, I am expanding into Full Stack Web Development—mastering everything from front-end design to back-end APIs.
+                            I don't just write code; I identify real-world bottlenecks and engineer digital solutions
+                            for them. I am highly adaptable, pressure-tested, and a relentless problem solver.
                         </p>
                     </div>
 
                     <div class="resume-card">
                         <h3><span class="icon">🛠</span> Tech Stack & Skills</h3>
                         <div class="skill-category">
-                            <span class="skill-label">Core & Languages</span>
+                            <span class="skill-label">Languages & Databases</span>
                             <div class="tags">
-                                <span>JavaScript</span><span>Python</span>
-                                <span>HTML5/CSS3</span><span>Git</span>
+                                <span>Python</span><span>JavaScript</span>
+                                <span>SQL</span><span>MySQL/PostgreSQL</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <span class="skill-label">Frameworks & Backend</span>
+                            <span class="skill-label">Frameworks & Tools</span>
                             <div class="tags">
-                                <span>React</span><span>Express.js</span>
-                                <span>Django</span><span>MongoDB</span>
-                                <span>Firebase</span>
+                                <span>Django</span><span>Flask</span>
+                                <span>React</span><span>Docker</span>
+                                <span>Git/GitHub</span>
                             </div>
                         </div>
                     </div>
@@ -266,29 +284,33 @@
                 <!-- COL 2: Commercial Experience -->
                 <div class="resume-col">
                     <div class="resume-card highlight-card">
-                        <h3><span class="icon">💼</span> Commercial Experience</h3>
-                        
-                        <!-- Hierarchy: H3 -> H4 (Valid) -->
+                        <h3><span class="icon">💼</span> Operational Experience</h3>
+
                         <div class="timeline-item">
-                            <span class="timeline-date">Freelance</span>
-                            <h4>POS & Inventory Systems</h4>
-                            <p class="timeline-desc">Developed and deployed custom Inventory Management and Point of Sale (POS) solutions for local businesses, improving their operational efficiency.</p>
+                            <span class="timeline-date">2020 - Present</span>
+                            <h4>Operations Manager & Tech Lead</h4>
+                            <p class="timeline-desc">Managed daily operations, logistics, and high-volume cash
+                                transactions for family-owned Water Distribution and Grocery enterprises. Developed
+                                custom POS and inventory software to digitize our workflows.</p>
                         </div>
 
                         <div class="timeline-item">
-                            <span class="timeline-date">Current Focus</span>
-                            <h4>API Development</h4>
-                            <p class="timeline-desc">Designing and optimizing backend APIs and databases for scalable web applications.</p>
+                            <span class="timeline-date">Freelance</span>
+                            <h4>IT Technician & General Operations</h4>
+                            <p class="timeline-desc">Provided custom PC building and hardware diagnostics. Displayed
+                                extreme grit balancing physical labor (farming, construction, fleet vehicle maintenance)
+                                with complex technical problem-solving.</p>
                         </div>
                     </div>
 
                     <div class="resume-card">
                         <h3><span class="icon">🎓</span> Education</h3>
                         <div class="timeline-item">
-                            <span class="timeline-date">Present</span>
+                            <span class="timeline-date">Expected 2027</span>
                             <h4>Xavier University - Ateneo de Cagayan</h4>
                             <p class="timeline-desc">BS in Information Technology</p>
-                            <p class="timeline-desc" style="font-size: 0.8rem; margin-top: 5px; opacity: 0.7;">20220025820@my.xu.edu.ph</p>
+                            <p class="timeline-desc" style="font-size: 0.8rem; margin-top: 5px; opacity: 0.7;">OJT
+                                Requirement: 486 Hours</p>
                         </div>
                     </div>
                 </div>
@@ -296,24 +318,25 @@
                 <!-- COL 3: Interests & Fun Facts -->
                 <div class="resume-col">
                     <div class="resume-card">
-                        <h3><span class="icon">🚀</span> Project Involvement</h3>
+                        <h3><span class="icon">🔧</span> Interests & Hobbies</h3>
                         <div class="project-list-item">
-                            <h4>We Are Warriors Game</h4>
-                            <p>Engineered a custom state machine and turn-based logic system using Vanilla JS.</p>
+                            <h4>Hardware Enthusiast</h4>
+                            <p>Passionate about custom PC builds, network diagnostics, and performance tuning.</p>
                         </div>
                         <div class="project-list-item">
-                            <h4>Full Stack Login System</h4>
-                            <p>Implemented secure database routing and client-side validation logic.</p>
+                            <h4>Mechanical Troubleshooting</h4>
+                            <p>Hands-on DIY repair, diagnostics, and maintenance of motorcycles and vehicles.</p>
                         </div>
                     </div>
 
                     <div class="resume-card">
-                        <h3><span class="icon">🎮</span> Beyond Code</h3>
+                        <h3><span class="icon">🎮</span> Algorithmic Gaming</h3>
                         <p class="bio-text">
-                            When I'm not coding, I'm a competitive gamer specializing in <strong>RPG genres</strong>. I bring that same competitive spirit and strategic thinking to my development work.
+                            Highly competitive in strategy and RPG games. I apply that same strategic, state-machine
+                            logic to my software architecture.
                         </p>
                         <p class="bio-text" style="margin-top: 10px;">
-                            <em>"Just hit me up (Jepoyskies)"</em>
+                            <em>"If it’s broken, I'll figure out how to fix it."</em>
                         </p>
                     </div>
                 </div>
@@ -328,8 +351,8 @@
                 <div style="position: relative; z-index: 2; text-align: center;">
                     <span class="mono-label" style="color: var(--accent);">05. Contact Details</span>
                     <h2>Let's Work Together</h2>
-                    <p>Open for development and business opportunities.</p>
-                    
+                    <p>Currently seeking an OJT / Internship position (486 Hours).</p>
+
                     <div class="contact-grid">
                         <div class="contact-item">
                             <span class="label">Phone</span>
@@ -359,9 +382,10 @@
     <footer>
         <div class="footer-content">
             <span class="logo">JA.</span>
-            <p>© 2026 Joseph Ernest P. Alberto. Engineered with precision.</p>
+            <p>© 2026 Joseph Ernest P. Alberto. Engineered with grit and precision.</p>
         </div>
     </footer>
 
 </body>
+
 </html>
